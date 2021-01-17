@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% block body %}
+<style>
+body
+{
+	margin: 0;
+	padding: 0;
+	background: url("tree img.jpg");
+	background-size: cover;
+	font-family: sans-serif;
+}
+.LoginBox
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 420px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(22,120,100,.3);
+}
+.user
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: calc(-100px/2);
+	left: calc(50% - 50px); 
+}
+h2
+{
+	margin:0;
+	padding: 0 0 20px;
+	color: #efed40;
+	text-align: center;
+}
+.LoginBox p
+{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+}
+.LoginBox input
+{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.LoginBox input[type="text"],
+.LoginBox input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px; 
+}	
+::placeholder
+{
+	color:rgba(255,255,255,5);
+
+}
+.LoginBox input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	background: #ff267e;
+	cursor: pointer;
+	border-radius: 20px;
+}
+.LoginBox input[type="submit"]:hover
+{
+	background: #efed40;
+	color: #262626;
+}
+.LoginBox a
+{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	 
+}
+
+
+</style>
+<body>
+	<div class="LoginBox">
+		{% set fname = 'img/' + params['Login_img'] %}
+		<img src="{{ url_for('static', filename=fname)}}" class="user">
+		<h2>Log In Here</h2>
+		<form action="/dashboard" method="post">
+			<p>Email_address</p>
+			<input type="text" id="uname" name="uname" placeholder="User name"> 
+			<p>Password</p>
+			<input type="Password" id="pass" name="pass" placeholder="......."> 
+			<input type="submit" name="" value="Sign In"> 
+			<a href="#">Forget Password</a>
+		</form>
+</body>
+{% endblock %} 

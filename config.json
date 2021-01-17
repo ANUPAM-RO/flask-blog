@@ -1,0 +1,23 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "sqlite:///blog.db",
+    "pord_uri": "sqlite:///blog.db",
+    "fb_url": "https://facebook.com/blog",
+    "tw_url":"https://twitter.com/blog",
+    "gu_url": "https://github.com/blog",
+    "blog_name": "Coding Thunder",
+    "tag_line": "Haven for programmers",
+    "gmail-user": "anupamroy575@gmail.com",
+    "gmail-password": "Anupam743245",
+    "about_text": "Hi my name is Anupam. I am a student of MCA.",
+    "no_of_posts": 2,
+    "Login_img" : "user.png",
+    "Admin_user": "Anupam",
+    "Admin_password": "supportus",
+    "upload_location": "/home/anupam/PycharmProjects/flask-blog_project/static"
+
+  }
+
+}
